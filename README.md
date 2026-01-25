@@ -1,18 +1,20 @@
 *This project has been created as part of the 42 curriculum by ylagzoul.*
 
-# Libft  
+# Libft
+
 Your very first own C library
 
 ## Description
 
-Libft is a foundational project from the 42 curriculum.  
+Libft is a foundational project from the 42 curriculum.
 The goal of this project is to reimplement common functions from the C standard library and build a personal static library.
 
 By completing this project, I learned:
-- How standard C functions work internally
-- How to manage memory safely
-- How to create and use a static library
-- How to manipulate strings, memory, and linked lists in C
+
+* How standard C functions work internally
+* How to manage memory safely
+* How to create and use a static library
+* How to manipulate strings, memory, and linked lists in C
 
 This library will be reused in many future 42 projects.
 
@@ -26,166 +28,323 @@ To compile the library, run:
 
 ```bash
 make
+```
+
 This command creates the static library:
 
-text
-Copy code
+```text
 libft.a
-Cleaning
+```
+
+### Cleaning
+
 Remove object files:
 
-bash
-Copy code
+```bash
 make clean
+```
+
 Remove object files and the library:
 
-bash
-Copy code
+```bash
 make fclean
+```
+
 Recompile everything:
 
-bash
-Copy code
+```bash
 make re
-Library Content
-Part 1 – Libc Functions
-Reimplemented standard C library functions, all prefixed with ft_.
+```
 
-Character tests
+---
 
-ft_isalpha
+## Library Content
 
-ft_isdigit
+### Part 1 – Libc Functions
 
-ft_isalnum
+Reimplemented standard C library functions, all prefixed with `ft_`.
 
-ft_isascii
+**Character tests**
 
-ft_isprint
+* `ft_isalpha`
+* `ft_isdigit`
+* `ft_isalnum`
+* `ft_isascii`
+* `ft_isprint`
 
-String and memory handling
+**String and memory handling**
 
-ft_strlen
+* `ft_strlen`
+* `ft_memset`
+* `ft_bzero`
+* `ft_memcpy`
+* `ft_memmove`
+* `ft_strlcpy`
+* `ft_strlcat`
+* `ft_strchr`
+* `ft_strrchr`
+* `ft_strncmp`
+* `ft_strnstr`
+* `ft_strdup`
 
-ft_memset
+**Conversion and comparison**
 
-ft_bzero
+* `ft_toupper`
+* `ft_tolower`
+* `ft_atoi`
+* `ft_memchr`
+* `ft_memcmp`
 
-ft_memcpy
+**Memory allocation**
 
-ft_memmove
+* `ft_calloc`
 
-ft_strlcpy
+---
 
-ft_strlcat
+### Part 2 – Additional Functions
 
-ft_strchr
-
-ft_strrchr
-
-ft_strncmp
-
-ft_strnstr
-
-ft_strdup
-
-Conversion and comparison
-
-ft_toupper
-
-ft_tolower
-
-ft_atoi
-
-ft_memchr
-
-ft_memcmp
-
-Memory allocation
-
-ft_calloc
-
-Part 2 – Additional Functions
 Utility functions not always available in the standard C library.
 
-String creation and editing
+**String creation and editing**
 
-ft_substr
+* `ft_substr`
+* `ft_strjoin`
+* `ft_strtrim`
+* `ft_split`
 
-ft_strjoin
+**Number conversion**
 
-ft_strtrim
+* `ft_itoa`
 
-ft_split
+**String iteration**
 
-Number conversion
+* `ft_strmapi`
+* `ft_striteri`
 
-ft_itoa
+**File descriptor output**
 
-String iteration
+* `ft_putchar_fd`
+* `ft_putstr_fd`
+* `ft_putendl_fd`
+* `ft_putnbr_fd`
 
-ft_strmapi
+---
 
-ft_striteri
+### Part 3 – Linked List Functions
 
-File descriptor output
-
-ft_putchar_fd
-
-ft_putstr_fd
-
-ft_putendl_fd
-
-ft_putnbr_fd
-
-Part 3 – Linked List Functions
 The library also includes linked list utilities using the following structure:
 
-c
-Copy code
+```c
 typedef struct s_list
 {
     void *content;
     struct s_list *next;
 } t_list;
+```
+
 Implemented functions:
 
-ft_lstnew
+* `ft_lstnew`
+* `ft_lstadd_front`
+* `ft_lstsize`
+* `ft_lstlast`
+* `ft_lstadd_back`
+* `ft_lstdelone`
+* `ft_lstclear`
+* `ft_lstiter`
+* `ft_lstmap`
 
-ft_lstadd_front
+---
 
-ft_lstsize
+## Rules and Constraints
 
-ft_lstlast
+* Written in **C**
+* No global variables
+* No unexpected program crashes
+* All allocated memory is properly freed
+* No memory leaks
+* Compiled with flags: `-Wall -Wextra -Werror`
+* Library created using `ar`
+* Code follows the **42 Norm**
 
-ft_lstadd_back
+---
 
-ft_lstdelone
+## Author
 
-ft_lstclear
+* **Login:** ylagzoul
+* **School:** 1337 (42 Network)
+*This project has been created as part of the 42 curriculum by ylagzoul.*
 
-ft_lstiter
+# Libft
 
-ft_lstmap
+Your very first own C library
 
-Rules and Constraints
-Written in C
+## Description
 
-No global variables
+Libft is a foundational project from the 42 curriculum.
+The goal of this project is to reimplement common functions from the C standard library and build a personal static library.
 
-No unexpected program crashes
+By completing this project, I learned:
 
-All allocated memory is properly freed
+* How standard C functions work internally
+* How to manage memory safely
+* How to create and use a static library
+* How to manipulate strings, memory, and linked lists in C
 
-No memory leaks
+This library will be reused in many future 42 projects.
 
-Compiled with flags: -Wall -Wextra -Werror
+---
 
-Library created using ar
+## Instructions
 
-Code follows the 42 Norm
+### Compilation
 
-Author
-Login: ylagzoul
+To compile the library, run:
 
-School: 1337 (42 Network)
+```bash
+make
+```
+
+This command creates the static library:
+
+```text
+libft.a
+```
+
+### Cleaning
+
+Remove object files:
+
+```bash
+make clean
+```
+
+Remove object files and the library:
+
+```bash
+make fclean
+```
+
+Recompile everything:
+
+```bash
+make re
+```
+
+---
+
+## Library Content
+
+### Part 1 – Libc Functions
+
+Reimplemented standard C library functions, all prefixed with `ft_`.
+
+**Character tests**
+
+* `ft_isalpha`
+* `ft_isdigit`
+* `ft_isalnum`
+* `ft_isascii`
+* `ft_isprint`
+
+**String and memory handling**
+
+* `ft_strlen`
+* `ft_memset`
+* `ft_bzero`
+* `ft_memcpy`
+* `ft_memmove`
+* `ft_strlcpy`
+* `ft_strlcat`
+* `ft_strchr`
+* `ft_strrchr`
+* `ft_strncmp`
+* `ft_strnstr`
+* `ft_strdup`
+
+**Conversion and comparison**
+
+* `ft_toupper`
+* `ft_tolower`
+* `ft_atoi`
+* `ft_memchr`
+* `ft_memcmp`
+
+**Memory allocation**
+
+* `ft_calloc`
+
+---
+
+### Part 2 – Additional Functions
+
+Utility functions not always available in the standard C library.
+
+**String creation and editing**
+
+* `ft_substr`
+* `ft_strjoin`
+* `ft_strtrim`
+* `ft_split`
+
+**Number conversion**
+
+* `ft_itoa`
+
+**String iteration**
+
+* `ft_strmapi`
+* `ft_striteri`
+
+**File descriptor output**
+
+* `ft_putchar_fd`
+* `ft_putstr_fd`
+* `ft_putendl_fd`
+* `ft_putnbr_fd`
+
+---
+
+### Part 3 – Linked List Functions
+
+The library also includes linked list utilities using the following structure:
+
+```c
+typedef struct s_list
+{
+    void *content;
+    struct s_list *next;
+} t_list;
+```
+
+Implemented functions:
+
+* `ft_lstnew`
+* `ft_lstadd_front`
+* `ft_lstsize`
+* `ft_lstlast`
+* `ft_lstadd_back`
+* `ft_lstdelone`
+* `ft_lstclear`
+* `ft_lstiter`
+* `ft_lstmap`
+
+---
+
+## Rules and Constraints
+
+* Written in **C**
+* No global variables
+* No unexpected program crashes
+* All allocated memory is properly freed
+* No memory leaks
+* Compiled with flags: `-Wall -Wextra -Werror`
+* Library created using `ar`
+* Code follows the **42 Norm**
+
+---
+
+## Author
+
+* **Login:** ylagzoul
+* **School:** 1337 (42 Network)
