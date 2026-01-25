@@ -6,7 +6,7 @@ Your very first own C library
 ## Description
 
 Libft is a foundational project from the 42 curriculum.  
-The purpose of this project is to recreate common functions from the C standard library and to build a personal static library.
+The goal of this project is to reimplement common functions from the C standard library and build a personal static library.
 
 By completing this project, I learned:
 - How standard C functions work internally
@@ -22,71 +22,132 @@ This library will be reused in many future 42 projects.
 
 ### Compilation
 
--> To compile the library, run:
+To compile the library, run:
 
 ```bash
 make
+This command creates the static library:
 
--> This command creates the static library:
-  libft.a
+text
+Copy code
+libft.a
+Cleaning
+Remove object files:
 
-### Cleaning
+bash
+Copy code
+make clean
+Remove object files and the library:
 
--> Remove object files:
-  make clean
+bash
+Copy code
+make fclean
+Recompile everything:
 
--> Remove object files and the library:
-  make fclean
+bash
+Copy code
+make re
+Library Content
+Part 1 – Libc Functions
+Reimplemented standard C library functions, all prefixed with ft_.
 
--> Recompile everything:
-  make re
+Character tests
 
-## Library Content
-*** Part 1 – Libc Functions
+ft_isalpha
 
-Reimplemented standard C library functions, all prefixed with ft_:
+ft_isdigit
 
-Character tests:
-ft_isalpha, ft_isdigit, ft_isalnum, ft_isascii, ft_isprint
+ft_isalnum
 
-String and memory handling:
-ft_strlen, ft_memset, ft_bzero, ft_memcpy, ft_memmove
-ft_strlcpy, ft_strlcat, ft_strchr, ft_strrchr
-ft_strncmp, ft_strnstr, ft_strdup
+ft_isascii
 
-Conversion and comparison:
-ft_toupper, ft_tolower, ft_atoi, ft_memchr, ft_memcmp
+ft_isprint
 
-Memory allocation:
+String and memory handling
+
+ft_strlen
+
+ft_memset
+
+ft_bzero
+
+ft_memcpy
+
+ft_memmove
+
+ft_strlcpy
+
+ft_strlcat
+
+ft_strchr
+
+ft_strrchr
+
+ft_strncmp
+
+ft_strnstr
+
+ft_strdup
+
+Conversion and comparison
+
+ft_toupper
+
+ft_tolower
+
+ft_atoi
+
+ft_memchr
+
+ft_memcmp
+
+Memory allocation
+
 ft_calloc
 
-*** Part 2 – Additional Functions
+Part 2 – Additional Functions
+Utility functions not always available in the standard C library.
 
-Utility functions not always present in libc:
+String creation and editing
 
-String creation and editing:
-ft_substr, ft_strjoin, ft_strtrim, ft_split
+ft_substr
 
-Number conversion:
+ft_strjoin
+
+ft_strtrim
+
+ft_split
+
+Number conversion
+
 ft_itoa
 
-String iteration:
-ft_strmapi, ft_striteri
+String iteration
 
-File descriptor output:
-ft_putchar_fd, ft_putstr_fd, ft_putendl_fd, ft_putnbr_fd
+ft_strmapi
 
-*** Part 3 – Linked List Functions
+ft_striteri
 
-The library also includes linked list utilities using this structure:
+File descriptor output
 
+ft_putchar_fd
+
+ft_putstr_fd
+
+ft_putendl_fd
+
+ft_putnbr_fd
+
+Part 3 – Linked List Functions
+The library also includes linked list utilities using the following structure:
+
+c
+Copy code
 typedef struct s_list
 {
     void *content;
     struct s_list *next;
 } t_list;
-
-
 Implemented functions:
 
 ft_lstnew
@@ -107,15 +168,14 @@ ft_lstiter
 
 ft_lstmap
 
-## Rules and Constraints
-
+Rules and Constraints
 Written in C
 
 No global variables
 
 No unexpected program crashes
 
-All allocated memory is freed
+All allocated memory is properly freed
 
 No memory leaks
 
@@ -125,10 +185,7 @@ Library created using ar
 
 Code follows the 42 Norm
 
-----------------
-
 Author
-
 Login: ylagzoul
 
-School: 1337
+School: 1337 (42 Network)
