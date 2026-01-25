@@ -42,7 +42,7 @@ make
   make re
 
 ## Library Content
-Part 1 – Libc Functions
+*** Part 1 – Libc Functions
 
 Reimplemented standard C library functions, all prefixed with ft_:
 
@@ -59,3 +59,76 @@ ft_toupper, ft_tolower, ft_atoi, ft_memchr, ft_memcmp
 
 Memory allocation:
 ft_calloc
+
+*** Part 2 – Additional Functions
+
+Utility functions not always present in libc:
+
+String creation and editing:
+ft_substr, ft_strjoin, ft_strtrim, ft_split
+
+Number conversion:
+ft_itoa
+
+String iteration:
+ft_strmapi, ft_striteri
+
+File descriptor output:
+ft_putchar_fd, ft_putstr_fd, ft_putendl_fd, ft_putnbr_fd
+
+*** Part 3 – Linked List Functions
+
+The library also includes linked list utilities using this structure:
+
+typedef struct s_list
+{
+    void *content;
+    struct s_list *next;
+} t_list;
+
+
+Implemented functions:
+
+ft_lstnew
+
+ft_lstadd_front
+
+ft_lstsize
+
+ft_lstlast
+
+ft_lstadd_back
+
+ft_lstdelone
+
+ft_lstclear
+
+ft_lstiter
+
+ft_lstmap
+
+## Rules and Constraints
+
+Written in C
+
+No global variables
+
+No unexpected program crashes
+
+All allocated memory is freed
+
+No memory leaks
+
+Compiled with flags: -Wall -Wextra -Werror
+
+Library created using ar
+
+Code follows the 42 Norm
+
+----------------
+
+Author
+
+Login: ylagzoul
+
+School: 1337
