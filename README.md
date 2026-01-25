@@ -165,7 +165,7 @@ Implemented functions:
 * No memory leaks
 * Compiled with flags: `-Wall -Wextra -Werror`
 * Library created using `ar`
-* Code follows the **42 Norm**
+* Code follows the **42 Norm** 
 
 ---
 
